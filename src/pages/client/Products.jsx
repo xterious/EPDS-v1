@@ -27,10 +27,10 @@ const Products = () => {
   }, []);
 
   return (
-    <>
+    <div className='relative'>
       <TopNavbar />
       <CartModal />
-      <div className='bg-gray-100 p-4'>
+      <div className='p-4'>
         <div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[60vh]'>
           {products.map((product, index) => (
             <ProductCard
@@ -44,7 +44,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
