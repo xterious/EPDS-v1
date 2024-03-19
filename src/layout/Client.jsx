@@ -7,7 +7,7 @@ const Client = () => {
   return (
     <>
       <Header />
-      <div className='min-h-[80vh]'>
+      <div>
         <Outlet />
       </div>
       <Footer />
