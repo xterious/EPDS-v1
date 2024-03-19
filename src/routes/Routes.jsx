@@ -10,6 +10,7 @@ import AdminHome from "@/pages/admin/Home";
 import AdminOrders from "@/pages/admin/Orders";
 import AdminFeedback from "@/pages/admin/Feedback";
 import Feedback from "@/pages/client/Feedback";
+import AdminLogin from "@/pages/admin/Login";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         element: <AdminFeedback />,
       },
     ],
+  },
+  {
+    path: "/admin/login",
+    element: <AdminLogin />,
   },
   {
     path: "*",
