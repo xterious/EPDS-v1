@@ -62,7 +62,7 @@ const Login = () => {
   return (
     <>
       <Header />
-      <div className='bg-slate-100 flex justify-center items-center h-[80.7vh]'>
+      <div className='bg-gradient-to-br from-slate-600 to-slate-400 flex justify-center items-center h-[80.7vh]'>
         <section className='border p-2 bg-white h-fit'>
           <div className='flex justify-center items-center gap-4'>
             <img src={logo} alt='tn-govt-logo' className='h-12 md:h-20' />
