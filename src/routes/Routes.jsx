@@ -23,10 +23,6 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
         path: "products",
         element: <Products />,
         children: [
@@ -59,6 +55,10 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/login",
+    element: <Login />,
+  },
+  {
     path: "/admin",
     element: <Admin />,
     children: [
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Navigate to='/' />,
+    element: <h1>Not Found</h1>,
   },
 ]);
 

@@ -18,6 +18,11 @@ const Navbar = () => {
     setOpen((prev) => !prev);
   };
 
+  const logout = () => {
+    localStorage.removeItem("token-client");
+    window.location.reload();
+  };
+
   return (
     <div className='bg-amber-900 p-4 text-white flex flex-col lg:flex-row lg:items-center gap-4'>
       <div className='flex items-center justify-between'>
@@ -60,10 +65,12 @@ const Navbar = () => {
           <p>Shops</p>
           <FontAwesomeIcon icon={faMapLocationDot} />
         </Link>
-        <Link className='flex items-center gap-3' to='/login'>
+        <div
+          onClick={logout}
+          className='flex items-center gap-3 cursor-pointer'>
           <p>Log Out</p>
           <FontAwesomeIcon icon={faRightFromBracket} />
-        </Link>
+        </div>
       </div>
       {/* Hamburger Menu Options */}
       <div
@@ -88,10 +95,12 @@ const Navbar = () => {
           <p>Shops</p>
           <FontAwesomeIcon icon={faMapLocationDot} />
         </Link>
-        <Link className='flex items-center justify-between w-full' to='/login'>
+        <div
+          onClick={logout}
+          className='flex items-center justify-between w-full'>
           <p>Log Out</p>
           <FontAwesomeIcon icon={faRightFromBracket} />
-        </Link>
+        </div>
       </div>
     </div>
   );
