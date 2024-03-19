@@ -1,4 +1,3 @@
-import Navbar from "@/components/products/Navbar";
 import TopNavbar from "@/components/client/Navbar";
 import React, { useState } from "react";
 import CartModal from "@/components/products/CartModal";

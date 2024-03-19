@@ -1,10 +1,14 @@
+import Navbar from "@/components/client/Navbar";
 import React from "react";
 
 const Orders = () => {
   return (
-    <div className='p-4'>
-      <h1>Orders Page</h1>
-    </div>
+    <>
+      <Navbar />
+      <div className='p-4'>
+        <h1>Orders Page</h1>
+      </div>
+    </>
   );
 };
 
