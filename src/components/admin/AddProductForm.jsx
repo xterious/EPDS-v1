@@ -6,11 +6,11 @@ import * as Dialog from "@radix-ui/react-dialog";
 
 const AddProductForm = () => {
   const [product, setProduct] = useState({
-    id: 0,
-    name: "",
+    id: null,
+    name: null,
     image: null,
-    price: 0,
-    scale: "",
+    price: null,
+    scale: null,
   });
 
   const handleInputChange = (event) => {
@@ -94,6 +94,7 @@ const AddProductForm = () => {
             <input
               type='text'
               name='scale'
+              placeholder='Scale for Measure'
               className='border p-2 rounded-lg focus:outline-none'
               value={product.scale}
               onChange={handleInputChange}
