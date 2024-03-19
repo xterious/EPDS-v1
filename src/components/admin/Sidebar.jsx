@@ -2,6 +2,7 @@ import { AuthState } from "@/atoms/Atoms";
 import {
   faCartFlatbed,
   faClipboardList,
+  faComment,
   faRightFromBracket,
   faSquarePollHorizontal,
 } from "@fortawesome/free-solid-svg-icons";
@@ -38,6 +39,10 @@ const Sidebar = () => {
       <NavLink className={getClassName} to='/admin/products'>
         <p>Manage Products</p>
         <FontAwesomeIcon icon={faCartFlatbed} />
+      </NavLink>
+      <NavLink className={getClassName} to='/admin/feedback'>
+        <p>View Feedbacks</p>
+        <FontAwesomeIcon icon={faComment} />
       </NavLink>
       <div
         onClick={logout}

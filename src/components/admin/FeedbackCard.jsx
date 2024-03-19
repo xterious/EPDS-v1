@@ -9,8 +9,10 @@ function FeedbackCard({ username, type, content }) {
           {type}
         </div>
         <p className='text-gray-700'>{content}</p>
+        <button className='bg-green-200 hover:bg-blue-700 hover:text-white  text-black font-bold py-1 px-3 rounded mt-2'>
+          Answer
+        </button>
       </div>
-      <button className=''>Answer</button>
     </div>
   );
 }

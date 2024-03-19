@@ -24,7 +24,7 @@ const Feed = [
 ];
 const AdminFeedback = () => {
   return (
-    <>
+    <div className='h-[90vh] overflow-scroll'>
       <div className='flex text-4xl font-mono font-bold justify-center mt-2'>
         Feedback And Queries
       </div>
@@ -38,7 +38,7 @@ const AdminFeedback = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
