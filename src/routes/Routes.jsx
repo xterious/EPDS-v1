@@ -1,13 +1,17 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Home from "@/pages/client/Home";
 import Login from "@/pages/client/Login";
-import Client from "../layout/Client";
+import Client from "@/layout/Client";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Client />,
     children: [
+      {
+        index: true,
+        element: <Home />,
+      },
       {
         path: "login",
         element: <Login />,
