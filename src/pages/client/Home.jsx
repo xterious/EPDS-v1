@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/client/Navbar";
 import Download from "@/components/home/Download";
 import AuthForm from "@/components/home/Form";
 import HelpInfo from "@/components/home/HelpInfo";

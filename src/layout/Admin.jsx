@@ -1,13 +1,15 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Sidebar from "@/components/admin/Sidebar";
 import React from "react";
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 
-const Client = () => {
+const Admin = () => {
   return (
     <>
       <Header />
-      <div>
+      <div className='flex'>
+        <Sidebar />
         <Outlet />
       </div>
       <Footer />
@@ -15,4 +17,4 @@ const Client = () => {
   );
 };
 
-export default Client;
+export default Admin;
