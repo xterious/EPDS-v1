@@ -8,7 +8,7 @@ import Loader from "./components/Loader";
 const App = () => {
   const [authState, setAuthState] = useRecoilState(AuthState);
 
-  useEffect(() => {
+  const checkAuthState = () => {
     const adminToken = localStorage.getItem("token-admin");
     const clientToken = localStorage.getItem("token-client");
     setAuthState({
@@ -16,6 +16,10 @@ const App = () => {
       isAdminLoggedIn: adminToken && adminToken,
       isLoading: false,
     });
+  };
+
+  useEffect(() => {
+    checkAuthState();
   }, []);
 
   if (authState.isLoading) return <Loader />;

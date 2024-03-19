@@ -1,3 +1,4 @@
+import { AuthState } from "@/atoms/Atoms";
 import {
   faCartFlatbed,
   faClipboardList,
@@ -6,14 +7,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const setAuth = useSetRecoilState(AuthState);
+
   const getClassName = ({ isActive }) => {
     return `flex items-center justify-between rounded-lg p-2 hover:bg-slate-300 transition-all ease-in duration-150 ${
       isActive && "bg-slate-300"
     }`;
   };
+
+  const logout = () => {
+    localStorage.removeItem("token-admin");
+    window.location.reload();
+  };
+
   return (
     <div className='w-1/6 h-[80.7vh] p-2 text-slate-800 space-y-2'>
       <NavLink end className={getClassName} to='/admin/'>
@@ -28,10 +39,12 @@ const Sidebar = () => {
         <p>Manage Products</p>
         <FontAwesomeIcon icon={faCartFlatbed} />
       </NavLink>
-      <NavLink className={getClassName} to='/admin/login'>
+      <div
+        onClick={logout}
+        className='flex items-center justify-between rounded-lg p-2 hover:bg-slate-300 transition-all ease-in duration-150 cursor-pointer'>
         <p>Log Out</p>
         <FontAwesomeIcon icon={faRightFromBracket} />
-      </NavLink>
+      </div>
     </div>
   );
 };

@@ -1,12 +1,17 @@
+import { AuthState } from "@/atoms/Atoms";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import axios from "axios";
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
 
 const AdminLogin = () => {
   const [creds, setCreds] = useState({
     email: "",
     password: "",
   });
+  const [authState, setAuthState] = useRecoilState(AuthState);
 
   const handleChange = (e) => {
     setCreds((prev) => ({
@@ -18,7 +23,21 @@ const AdminLogin = () => {
   const authenticateAdmin = (e) => {
     e.preventDefault();
     console.log(creds);
+    axios
+      .post(`${import.meta.env.VITE_APP_API_URL}/auth/loginAdmin`, {
+        ...creds,
+      })
+      .then((res) => {
+        localStorage.setItem("token-admin", res.data.token);
+        window.location.reload();
+      })
+      .catch((err) => {
+        alert("Invalid Credentials");
+        console.log(err);
+      });
   };
+
+  if (authState.isAdminLoggedIn) return <Navigate to='/admin' />;
 
   return (
     <>
