@@ -29,7 +29,7 @@ const UserDetails = () => {
 
 const Card = ({ no, name, icon }) => {
   return (
-    <div className='w-1/2 p-2 flex items-center justify-between text-yellow-700 border'>
+    <div className='w-1/2 p-2 flex items-center justify-between text-yellow-700 border hover:bg-gray-200 cursor-pointer transition-colors ease-in duration-100'>
       <div>
         <p className='text-2xl'>{no}</p>
         <p className='capitalize'>{name}</p>

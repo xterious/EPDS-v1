@@ -29,7 +29,7 @@ const Locations = () => {
 
 const Card = ({ no, name, icon }) => {
   return (
-    <div className='w-1/3 p-2 flex items-center justify-between text-green-800 border'>
+    <div className='w-1/3 p-2 flex items-center justify-between text-green-800 border hover:bg-gray-200 cursor-pointer transition-colors ease-in duration-100'>
       <div>
         <p className='text-2xl'>{no}</p>
         <p className='capitalize'>{name}</p>
