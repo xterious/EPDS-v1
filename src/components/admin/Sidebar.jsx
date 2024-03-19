@@ -1,4 +1,5 @@
 import {
+  faCartFlatbed,
   faClipboardList,
   faRightFromBracket,
   faSquarePollHorizontal,
@@ -22,6 +23,10 @@ const Sidebar = () => {
       <NavLink className={getClassName} to='/admin/orders'>
         <p>View Orders</p>
         <FontAwesomeIcon icon={faClipboardList} />
+      </NavLink>
+      <NavLink className={getClassName} to='/admin/products'>
+        <p>Manage Products</p>
+        <FontAwesomeIcon icon={faCartFlatbed} />
       </NavLink>
       <NavLink className={getClassName} to='/admin/login'>
         <p>Log Out</p>

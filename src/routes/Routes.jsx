@@ -11,6 +11,7 @@ import AdminOrders from "@/pages/admin/Orders";
 import AdminFeedback from "@/pages/admin/Feedback";
 import Feedback from "@/pages/client/Feedback";
 import AdminLogin from "@/pages/admin/Login";
+import AdminProducts from "@/pages/admin/Products";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "orders",
         element: <AdminOrders />,
+      },
+      {
+        path: "products",
+        element: <AdminProducts />,
       },
       {
         path: "feedback",
