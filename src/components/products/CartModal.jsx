@@ -22,6 +22,26 @@ const CartModal = () => {
       });
   };
 
+  const checkOut = () => {
+    axios
+      .post(
+        `${import.meta.env.VITE_APP_API_URL}/product/checkout`,
+        {},
+        {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token-client"),
+          },
+        }
+      )
+      .then((res) => {
+        alert(res.data);
+        fetchCartItems();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     fetchCartItems();
   }, []);
@@ -64,7 +84,9 @@ const CartModal = () => {
             <Dialog.Close className='px-3 py-1 flex items-center justify-around gap-1 text-red-500 rounded-md bg-none border border-red-500 hover:bg-red-500 hover:text-white transition duration-300'>
               Close
             </Dialog.Close>
-            <button className='px-3 py-1 flex items-center justify-around gap-1 text-green-600 rounded-md bg-none border border-green-600 hover:bg-green-600 hover:text-white transition duration-300'>
+            <button
+              className='px-3 py-1 flex items-center justify-around gap-1 text-green-600 rounded-md bg-none border border-green-600 hover:bg-green-600 hover:text-white transition duration-300'
+              onClick={checkOut}>
               Checkout
             </button>
           </div>
