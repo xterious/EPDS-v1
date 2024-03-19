@@ -9,11 +9,9 @@ const Client = () => {
   return (
     <>
       <Header />
-      <Navbar />
       <div>
         <Outlet />
       </div>
-      <Download />
       <Footer />
     </>
   );
