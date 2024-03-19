@@ -2,7 +2,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import Home from "@/pages/client/Home";
 import Login from "@/pages/client/Login";
 import Client from "@/layout/Client";
-import Products from "@/pages/client/Products";
+import Products from "@/pages/client/Products/Products";
 import Orders from "@/pages/client/Orders";
 import Shops from "@/pages/client/Shops";
 import Admin from "@/layout/Admin";
@@ -29,6 +29,20 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+        children: [
+          {
+            path: "all",
+            element: <AdminHome />,
+          },
+          {
+            path: "orders",
+            element: <AdminOrders />,
+          },
+          {
+            path: "feedback",
+            element: <AdminFeedback />,
+          },
+        ],
       },
       {
         path: "orders",
