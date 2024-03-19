@@ -11,7 +11,7 @@ import React from "react";
 
 const Locations = () => {
   return (
-    <div className='rounded-lg border w-1/2'>
+    <div className='rounded-lg border lg:w-1/2'>
       <h1 className='bg-green-800 text-white p-2 rounded-t-lg font-semibold text-xl'>
         Public Distribution System Details
       </h1>

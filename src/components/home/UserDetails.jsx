@@ -13,7 +13,7 @@ import React from "react";
 
 const UserDetails = () => {
   return (
-    <div className='rounded-lg border w-1/2'>
+    <div className='rounded-lg border lg:w-1/2'>
       <h1 className='bg-yellow-600 text-white p-2 rounded-t-lg font-semibold text-xl'>
         Family Card Details
       </h1>
