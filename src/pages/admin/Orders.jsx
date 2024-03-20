@@ -9,6 +9,7 @@ const AdminOrders = () => {
       .get(`${import.meta.env.VITE_APP_API_URL}/admin/getOrders`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token-admin"),
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((res) => {

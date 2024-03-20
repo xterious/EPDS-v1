@@ -12,6 +12,7 @@ const CartModal = () => {
       .get(`${import.meta.env.VITE_APP_API_URL}/product/getCart`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token-client"),
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((res) => {
@@ -30,6 +31,7 @@ const CartModal = () => {
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token-client"),
+            "ngrok-skip-browser-warning": "69420",
           },
         }
       )
