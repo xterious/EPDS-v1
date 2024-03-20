@@ -12,6 +12,7 @@ const ProductCard = ({ id, imageUrl, name, price, scale }) => {
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token-client"),
+            "ngrok-skip-browser-warning": "69420",
           },
         }
       )

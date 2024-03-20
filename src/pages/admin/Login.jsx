@@ -24,9 +24,17 @@ const AdminLogin = () => {
     e.preventDefault();
     console.log(creds);
     axios
-      .post(`${import.meta.env.VITE_APP_API_URL}/auth/loginAdmin`, {
-        ...creds,
-      })
+      .post(
+        `${import.meta.env.VITE_APP_API_URL}/auth/loginAdmin`,
+        {
+          ...creds,
+        },
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "69420",
+          },
+        }
+      )
       .then((res) => {
         localStorage.setItem("token-admin", res.data.token);
         window.location.reload();

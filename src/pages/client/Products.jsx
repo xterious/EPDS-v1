@@ -12,6 +12,7 @@ const Products = () => {
       .get(`${import.meta.env.VITE_APP_API_URL}/product/all`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token-client"),
+          "ngrok-skip-browser-warning": "69420",
         },
       })
       .then((res) => {
