@@ -97,22 +97,22 @@ const AdminHome = () => {
   };
 
   return (
-    <div className='p-4 overflow-y-scroll'>
-      <div className='flex flex-col h-full space-y-6 md:space-x-8 w-[90%] mx-auto md:space-y-0 mb-4'>
-        <div className='flex flex-col space-y-5 w-[70%] items-center mx-auto'>
-          <h1 className='text-xl font-semibold text-slate-800'>
-            Public Distribution Supplies Stock Tamil Nadu
-          </h1>
+    <div className="p-4 overflow-y-scroll">
+      <h1 className="text-xl font-semibold text-slate-800 text-center mb-5">
+        Public Distribution Supplies Stock Tamil Nadu
+      </h1>
+      <div className="flex flex-col h-full space-y-6 md:space-x-8 w-[90%] mx-auto md:space-y-0 mb-4">
+        <div className="flex flex-col space-y-5 w-[70%] items-center mx-auto mb-5">
           <Stocks />
         </div>
         <div>
-          <h1 className='text-xl font-semibold text-slate-800'>
+          <h1 className="text-xl font-semibold text-slate-800 text-center my-4">
             District Wise Product Distribution
           </h1>
-          <div className='flex flex-wrap md:flex-row gap-4 justify-center'>
-            <PieChart data={chennaiNorthData} city='Chennai - North' />
-            <PieChart data={chennaiSouthData} city='Chennai - South' />
-            <PieChart data={ariyalurData} city='Ariyalur' />
+          <div className="flex flex-wrap md:flex-row gap-4 justify-center">
+            <PieChart data={chennaiNorthData} city="Chennai - North" />
+            <PieChart data={chennaiSouthData} city="Chennai - South" />
+            <PieChart data={ariyalurData} city="Ariyalur" />
           </div>
         </div>
       </div>

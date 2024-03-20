@@ -66,5 +66,11 @@ export const data = {
 };
 
 export function Stocks() {
-  return <Bar options={options} data={data} className='hidden md:block' />;
+  return (
+    <Bar
+      options={options}
+      data={data}
+      className="hidden md:block bg-slate-50 rounded-md px-2"
+    />
+  );
 }
