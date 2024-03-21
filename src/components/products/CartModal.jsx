@@ -55,7 +55,7 @@ const CartModal = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger onClick={fetchCartItems}>
-        <div className='absolute right-4 bottom-4 flex items-center gap-1 bg-gray-600 text-white p-2 rounded-lg'>
+        <div className="absolute right-4 bottom-4 flex items-center gap-1 bg-gray-600 text-white p-2 rounded-lg">
           <h1>View Cart</h1>
           <div>
             <FontAwesomeIcon icon={faCartShopping} />
@@ -63,8 +63,8 @@ const CartModal = () => {
         </div>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className='bg-black/25 data-[state=open]:animate-overlayShow fixed inset-0' />
-        <Dialog.Content className='data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[600px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none space-y-4 flex flex-col items-end justify-end'>
+        <Dialog.Overlay className="bg-black/25 data-[state=open]:animate-overlayShow fixed inset-0" />
+        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[90vh] overflow-y-scroll w-[90vw] max-w-[600px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none space-y-4 flex flex-col items-end justify-end">
           {products.length > 0 ? (
             products.map((product, index) => (
               <CartItem
@@ -80,15 +80,16 @@ const CartModal = () => {
               />
             ))
           ) : (
-            <p className='h-fit place-self-start text-xl'>Cart is Empty</p>
+            <p className="h-fit place-self-start text-xl">Cart is Empty</p>
           )}
-          <div className='flex items-center gap-1'>
-            <Dialog.Close className='px-3 py-1 flex items-center justify-around gap-1 text-red-500 rounded-md bg-none border border-red-500 hover:bg-red-500 hover:text-white transition duration-300'>
+          <div className="flex items-center gap-1">
+            <Dialog.Close className="px-3 py-1 flex items-center justify-around gap-1 text-red-500 rounded-md bg-none border border-red-500 hover:bg-red-500 hover:text-white transition duration-300">
               Close
             </Dialog.Close>
             <button
-              className='px-3 py-1 flex items-center justify-around gap-1 text-green-600 rounded-md bg-none border border-green-600 hover:bg-green-600 hover:text-white transition duration-300'
-              onClick={checkOut}>
+              className="px-3 py-1 flex items-center justify-around gap-1 text-green-600 rounded-md bg-none border border-green-600 hover:bg-green-600 hover:text-white transition duration-300"
+              onClick={checkOut}
+            >
               Checkout
             </button>
           </div>
@@ -166,33 +167,35 @@ const CartItem = ({
   }, [qty]);
 
   return (
-    <div className='flex gap-2'>
-      <img src={image} alt={name} className='w-1/3 h-full' />
-      <div className='w-1/3 flex flex-col justify-end'>
-        <h1 className='font-bold text-sm'>Total</h1>
-        <p className='text-lg'>₹{price * qty}</p>
+    <div className="flex gap-2 h-32 w-full border border-slate-300 p-1 rounded-md">
+      <img src={image} alt={name} className="w-1/3" />
+      <div className="w-1/3 flex flex-col justify-end">
+        <h1 className="font-bold text-sm">Total</h1>
+        <p className="text-lg">₹{price * qty}</p>
       </div>
-      <div className='w-1/3 flex flex-col items-end justify-end'>
-        <h1 className='capitalize font-semibold'>{name}</h1>
+      <div className="w-1/3 flex flex-col items-end justify-end">
+        <h1 className="capitalize font-semibold">{name}</h1>
         <p>
-          ₹{price} per <span className='capitalize'>{scale}</span>
+          ₹{price} per <span className="capitalize">{scale}</span>
         </p>
-        <p className='capitalize'>
+        <p className="capitalize">
           qty {qty} {scale}
         </p>
-        <div className='flex items-center gap-1'>
+        <div className="flex items-center gap-1">
           <button
-            className='size-6 bg-red-600 text-center text-white rounded-full text-sm hover:bg-red-800'
-            onClick={handleDecrease}>
+            className="size-6 bg-red-600 text-center text-white rounded-full text-sm hover:bg-red-800"
+            onClick={handleDecrease}
+          >
             -
           </button>
           <button
-            className='size-6 bg-red-600 text-center text-white rounded-full text-sm hover:bg-red-800'
-            onClick={handleIncrease}>
+            className="size-6 bg-red-600 text-center text-white rounded-full text-sm hover:bg-red-800"
+            onClick={handleIncrease}
+          >
             +
           </button>
           <FontAwesomeIcon
-            className='text-red-500 hover:text-red-800 cursor-pointer'
+            className="text-red-500 hover:text-red-800 cursor-pointer"
             onClick={removeFromCart}
             icon={faTrash}
           />
