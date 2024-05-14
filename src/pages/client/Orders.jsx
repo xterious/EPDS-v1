@@ -25,7 +25,7 @@ const Orders = () => {
     fetchProducts();
   }, []);
   return (
-    <>
+    <div className='min-h-[85vh]'>
       <Navbar />
       <div className='p-4'>
         <h2 className='text-xl font-bold mb-4'>My Orders</h2>
@@ -72,7 +72,7 @@ const Orders = () => {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

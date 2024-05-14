@@ -2,22 +2,22 @@ import React from "react";
 import FeedbackCard from "@/components/admin/FeedbackCard";
 const Feed = [
   {
-    username: "Jane Doe",
+    username: "Muthu Aanand SU",
     type: "query",
     content: "How can I apply for a new ration card online?",
   },
   {
-    username: "John Smith",
+    username: "Kamalesh Kumar S",
     type: "feedback",
     content: "The online ordering system is very convenient. Thank you!",
   },
   {
-    username: "Alice Johnson",
+    username: "R K Gurusanjay",
     type: "query",
     content: "Is there a way to update my address for the ration card?",
   },
   {
-    username: "Bob Brown",
+    username: "M Nithya",
     type: "feedback",
     content: "The delivery service is prompt and reliable.",
   },
