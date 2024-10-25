@@ -21,6 +21,7 @@
     "axios": "^1.6.8",
     "chart.js": "^4.4.2",
     "cloudinary": "^2.0.3",
+    "e-pds": "file:",
     "firebase": "^10.9.0",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
